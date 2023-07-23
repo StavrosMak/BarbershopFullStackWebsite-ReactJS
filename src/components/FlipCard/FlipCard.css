@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+.flip-card {
+  background-color: transparent;
+  width: 350px;
+  height: 300px;
+  perspective: 1000px;
+  /* margin-left: 10px; */
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.flip-card.back-flip .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card.back-flip .flag {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+.flip-card:hover .action-btns {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: .2em 0;
+  height: 45px;
+}
+
+.flip-card .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card .flip-card-inner .flip-card-front,
+.flip-card .flip-card-inner .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card .flip-card-inner .flip-card-front {
+  /* background-color: #bbb; */
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.flip-card-front img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card .flip-card-inner .flip-card-back {
+  background-color: rgba(0, 0, 0, 0.924);
+  max-height: 350px;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flipCardHeader {
+  /* border-bottom: 1px solid black; */
+  /* width: 180px; */
+  margin: auto;
+  /* margin-bottom: .3em; */
+  text-align: center;
+  font-weight: 500;
+  padding: 1em;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.93);
+  color: #fff;
+}
+
+.backContent {
+  font-size: 20px;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  height: 303px;
+}
+
+.action-btns {
+  width: 100%;
+  font-size: 25px;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.flip-card-front .showMoreBtn {
+  background-color: rgba(0, 0, 0, 0.8);
+
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  color: #fff;
+  position: relative;
+  top: -5px;
+  left: 0;
+
+}
+
+.flip-card-back .returnBack:hover,
+.showMoreBtn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  color: rgb(0, 0, 0);
+}
+
+ 
+
+.flip-card-back .returnBack {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  color: #fff;
+  position: relative;
+  top: -5px;
+  justify-self: flex-end;
+  z-index: 999;
+  left: 0;
+}
+
+.showMoreBtn.disabled,
+.returnBack.disabled {
+  pointer-events: none;
+  opacity: 0;
+  cursor: default;
+  color: #000;
+}

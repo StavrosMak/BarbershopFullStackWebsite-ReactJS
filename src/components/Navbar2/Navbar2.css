@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+button {
+    border: none;
+    outline: none;
+}
+
+:root {
+    --navbarItemsGap: 0.8em;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.Navbar {
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    height: 7em;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.colorChange {
+    transition: 0.6s;
+    background-color: black;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.NavbarItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: center;
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    padding: .2em;
+    color: #000000;
+    font-weight: 300;
+    color: #fff;
+}
+
+.BookBtn {
+    background-color: #fff;
+    padding: .6em .7em;
+    font-size: 20px;
+    margin: 0 3em;
+    /* width: 100px; */
+    color: #000000;
+}
+
+.NavbarSiteBrand {
+    width: 220px;
+
+}
+
+.NavbarSiteBrand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.nav-menu {
+    /* style */
+    list-style: none;
+    font-size: 1.5rem;
+
+    /* display */
+    display: flex;
+
+    gap: var(--navbarItemsGap);
+    white-space: nowrap;
+
+}
+
+.nav-menu .nav-links {
+    position: relative;
+}
+
+.nav-menu .nav-links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-menu li:hover::before {
+    width: 100%;
+    background-color: #fff;
+}
+
+.Navbar .hidden {
+    display: none;
+}
+
+
+.signUpBtn {
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3em;
+    font-size: 1rem;
+    font-weight: 600;
+    display: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.signUpBtn:hover {
+    background-color: #151516;
+    color: #fff;
+}
+
+.nav-menu.active {
+    transition: 0.2s ease-in-out;
+
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+.mobile-actions {
+    display: none;
+}
+
+.NavbarActions {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.singUpIconSection button {
+    background-color: transparent;
+    margin-left: 60%;
+    display: flex;
+    font-size: 24px;
+}
+
+
+@media screen and (max-width:768px) {
+
+    .Navbar {
+        background-color: black;
+        width: 100%;
+    }
+
+    .signUpBtn {
+        display: none-block;
+    }
+
+    .NavbarActions {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 10%;
+    }
+
+    .NavbarItems {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        /* display & position */
+        flex-direction: column;
+        position: absolute;
+        overflow: auto;
+        top: 4em;
+        left: -100%;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+
+        /* color * size */
+        background-color: #fff;
+        /* background-color: rgba(0, 0, 0, 0.9); */
+        background-color: black;
+        width: 100%;
+        min-height: 100vh;
+
+    }
+
+    .nav-links {
+        display: block;
+        font-size: 2rem;
+        padding: 0.5em 0;
+    }
+
+    .NavbarSiteBrand {
+        height: 100%;
+        width: 100px;
+    }
+
+    .Navbar .mobile-actions {
+        display: flex;
+        gap: 0.8em;
+        flex-direction: column;
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .mobile-actions a {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 1em 0;
+        background-color: black;
+        color: #fff;
+        font-style: italic;
+        border: 1px solid #fff;
+    }
+
+    
+
+    .Navbar button {
+        padding: 0.4em;
+        font-size: 1.3em;
+    }
+
+}

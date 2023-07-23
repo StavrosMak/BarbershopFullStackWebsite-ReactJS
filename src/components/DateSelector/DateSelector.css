@@ -1,0 +1,66 @@
+.BookContainer {
+    background-color: #fff;
+    color: black;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.Message {
+    text-align: center;
+}
+
+.BookContainer .leftSide {
+    background-color: #fff;
+}
+
+
+.AvailableHours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    height: 500px;
+    gap: 1em;
+}
+ 
+.AppointmentItem {
+    border: 1px solid #ccc;
+    margin:5px 0;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .1em;
+}
+
+.AppointmentItem.selected {
+    background-color: #ffffff60;
+    width: 98%;
+    box-shadow: 0 0 3px 3px rgba(0, 5, 98, 0.226);
+}
+
+.BarberName {
+    font-weight: bold;
+    color: #1a7dee;
+}
+
+.Date {
+    color: #888;
+    margin: .4em 0;
+}
+
+.StartTime {
+    margin-top: 5px;
+}
+
+@media screen and (max-width:768px) {
+    .BookContainer {
+        flex-direction: column;
+
+    }
+}
