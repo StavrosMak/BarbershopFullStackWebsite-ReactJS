@@ -30,7 +30,7 @@ export default function SignInForm(props) {
             } else if (response.data.message) {
                 setErrorMessage(response.data.message);
             } else {
-                setErrorMessage('An error occurred during login');
+                setErrorMessage('An error occurred during login.');
             }
         }).catch((error) => {
             setErrorMessage('An error occurred during login');
