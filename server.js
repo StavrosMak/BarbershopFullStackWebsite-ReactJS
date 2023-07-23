@@ -18,9 +18,8 @@ const db = mysql.createConnection({
 
 })
 
-// Define an API endpoint to get the cards data
 app.get('/api/cards', (req, res) => {
-  const query = 'SELECT * FROM Services'; // Replace "services" with your table name
+  const query = 'SELECT * FROM Services';
   db.query(query, (err, results) => {
     if (err) {
       console.error('Error fetching data:', err);
@@ -119,8 +118,8 @@ app.post('/register', (req, res) => {
 app.post('/book', (req, res) => {
   const { UserID, name, phone, email, date, time } = req.body;
 
-  // Retrieve the barberID based on some criteria (e.g., by querying the database or using a lookup table)
-  const barberID = 1; // Replace with the logic to retrieve the correct barberID
+  // Retrieve the barberID
+  const barberID = 1; // To be Replaced
 
   db.query(
     `INSERT INTO Appointments (UserID, EmployeeID, Date, Time, Name, Phone, Email)
