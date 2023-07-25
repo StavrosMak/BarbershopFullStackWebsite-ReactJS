@@ -1,0 +1,24 @@
+{
+    "contactInfo": [
+        {
+            "label": "Location",
+            "icon": "fas fa-map-marker-alt",
+            "value": "Athens,ATH"
+        },
+        {
+            "label": "Email",
+            "icon": "fa-regular fa-envelope",
+            "value": "info@email.com"
+        },
+        {
+            "label": "Phone Number",
+            "icon": "fas fa-phone-alt",
+            "value": "+210 000 000 00"
+        },
+        {
+            "label": "Fax",
+            "icon": "fa-solid fa-fax",
+            "value": "121312312312"
+        }
+    ]
+}

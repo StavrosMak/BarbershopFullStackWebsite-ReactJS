@@ -1,0 +1,193 @@
+/* CSS module for AllAppointments.js */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f0f0f0;
+}
+
+.AllAppointmentsAdmin {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AllAppointments {
+  background-color: var(--secondary-color);
+  max-width: 1200px;
+  min-height: 750px;
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7em;
+  gap: 2em;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.appointments-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointmentRowLeftSide {
+  flex: 1;
+}
+
+.appointmentRowRightSide {
+  display: flex;
+  gap: 1em;
+}
+
+.search-input input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 200px;
+}
+
+.add-icon i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.table th {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.table button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.table button:hover {
+  background-color: #0056b3;
+}
+
+.adminsActionBtns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.adminsActionBtns .cancelBtn {
+  background-color: red;
+}
+
+.adminsActionBtns .cancelBtn:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.sortBtn button {
+  background-color: inherit;
+  color: black;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.sortBtn button:hover {
+  background-color: inherit;
+}
+
+.mobile-sort-buttons {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table tr {
+    margin-bottom: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .table td {
+    border: none;
+    padding: 0.5rem 1rem;
+  }
+
+
+  .table td:last-child {
+    padding: 0.5rem 0;
+  }
+
+  .adminsActionBtns {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .appointments-row {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .mobile-sort-buttons {
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    background-color: var(--secondary-color);
+  }
+
+  .mobile-sort-buttons button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+  }
+
+  .mobile-sort-buttons button:last-child {
+    margin-right: 0;
+  }
+
+  .mobile-sort-buttons button:hover {
+    background-color: #0056b3;
+  }
+
+}
