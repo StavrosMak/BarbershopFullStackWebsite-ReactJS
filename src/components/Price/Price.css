@@ -1,0 +1,211 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #3d2f71;
+}
+
+.card {
+
+
+    /* box-shadow: 7px 13px 49px -5px rgba(86, 63, 130, 0.78); */
+    box-shadow: 7px 2px 50px -20px rgba(1, 1, 1, 0.78);
+    border-radius: 30px;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    margin: 5em auto;
+    max-width: 900px;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #3d2f71;
+}
+
+.card h2 {
+    color: black;
+    text-align: center;
+    margin: 1em auto;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+     /* padding: 2em; */
+    max-width: 500px;
+
+    width: 100%;
+    /* margin: 20px; */
+}
+
+/* .left {
+    margin-right: 20px;
+} */
+
+.right {
+    /* background-color: red; */
+    /* width: 500px; */
+    width: 100%;
+}
+
+
+.form-label {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    max-width: 600px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.price__items {
+    display: flex;
+    font-size: 6px;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.price__descr {
+    max-width: 700px;
+    width: 100%;
+    padding: 0 1em;
+    text-align: left;
+}
+
+.price-collapse .price__item {
+    margin-bottom: 5px;
+}
+
+.collapse {
+    margin-bottom: 20px;
+    margin-left: 32px;
+    cursor: pointer;
+}
+
+.price__add {
+    font-weight: 600;
+    color: #292929;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    max-width: 450px;
+    font-size: 15;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    width: 70px;
+    text-align: center;
+}
+
+.day-price {
+    color: #3d2f71;
+}
+
+.icon {
+    transition: all .2s linear;
+    font-size: 20px;
+    width: 22px;
+}
+
+.icon-add {
+    color: #0c0c0c;
+}
+
+.icon-add:hover {
+    color: #319cec;
+    color: rgba(1, 1, 1, 0.5);
+}
+
+.icon-delete {
+    color: #92da8a;
+}
+
+.icon-delete:hover {
+    color: #f37490;
+}
+
+.icon-delete:hover::before {
+    content: "\f057";
+}
+
+.collapse__button {
+    display: flex;
+}
+
+.collapse__switch {
+    width: 60px;
+}
+
+.switch__icon {
+    color: #808080;
+}
+
+.show {
+    margin-top: 10px;
+    font-size: 16px;
+    max-width: 420px;
+}
+
+.price__summe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #fff;
+    border-radius: 20px;
+
+}
+
+.summe-span {
+    transition: all .4s linear;
+}
+
+h3 {
+    margin-right: 20px;
+    /* text-transform: uppercase; */
+    /* font-weight: 600; */
+    padding: .5em;
+    /* letter-spacing: 0; */
+}
+
+.summe-span {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 1100px) {
+    .wrap {
+        display: block;
+    }
+}
+
+.fa-instagram {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    font-size: 38px;
+}
+
+.fa-instagram:hover {
+    font-size: 42px;
+    color: #dca118;
+    transition: all .1s linear;
+    cursor: pointer;
+}
