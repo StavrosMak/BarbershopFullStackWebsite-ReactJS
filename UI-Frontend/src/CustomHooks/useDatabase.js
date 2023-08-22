@@ -150,9 +150,7 @@ const useDatabase = (token, user = null) => {
         fetchData();
     }, [fetchData]);
 
-
-
-    // Return the data and the cancelAppointment function
+   //export
     return { data,cancelAvailableAppointment,updateCustomerInfo, cancelAppointment, fetchCustomerInfo, bookAppointment, checkRole, fetchAppointments, updateAppointment };
 };
 
