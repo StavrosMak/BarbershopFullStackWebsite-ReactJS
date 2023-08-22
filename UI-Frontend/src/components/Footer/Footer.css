@@ -1,0 +1,156 @@
+footer {
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+.FooterContainer {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    max-width: 2500px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.brandInfo {
+    text-align: center;
+    font-size: 1em;
+    max-width: 450px;
+}
+
+
+.brandInfo img {
+    width:200px;
+}
+
+.brandHeader img {
+    width: 200px;
+    height: 150px;
+}
+
+.Footerlinks {
+    display: flex;
+}
+
+
+.FooterItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5em;
+    margin: auto;
+    text-decoration: none;
+    list-style: none;
+    /* background-color: lightblue; */
+}
+
+.FooterItem h3 {
+    border-bottom: 1px solid #fff;
+
+}
+
+
+.Footerlinks ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.Footerlinks ul li a:hover {
+    color: rgb(129, 129, 129);
+    text-decoration: none;
+}
+
+
+
+.copyRights {
+    grid-column-start: 2;
+    align-self: flex-end;
+    padding: 1em;
+}
+
+.social {
+    width: 300px;
+    gap: 2em;
+}
+
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.subscriptionField {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.subscriptionField input {
+    width: 70%;
+}
+
+.subscriptionField button {
+    background-color: gray;
+    color: #fff;
+    width: 30%;
+}
+
+.subscriptionField * {
+    border: none;
+    outline: none;
+    padding: 0.8em;
+}
+
+.socialLinks {
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.socialLinks a {
+    color: #fff;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+.contactInfo span {
+    padding-left: 0.7em;
+}
+
+
+@media screen and (max-width:768px) {
+    .FooterContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .brandInfo {
+        max-width: 100vw;
+    }
+
+    .Footerlinks {
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 0;
+    }
+
+    .FooterItem {
+        align-items: center;
+    }
+
+    .copyRights {
+        grid-column-start: 1;
+        align-self: flex-end;
+    }
+
+}
