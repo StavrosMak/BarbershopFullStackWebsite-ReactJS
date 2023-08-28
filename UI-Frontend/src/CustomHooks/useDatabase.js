@@ -67,7 +67,7 @@ const useDatabase = (token, user = null) => {
         try {
             await axios.delete('http://localhost:3001/myappointments/cancel', {
                 data: {
-                    id: appointmentID
+                    AppID: appointmentID
                 }
             });
             // After cancellation, fetch the updated appointments
@@ -85,7 +85,6 @@ const useDatabase = (token, user = null) => {
                         AppID: appointmentID
                     }
                 });
-                // After cancellation, fetch the updated appointments
 
             } catch (error) {
                 console.log('Error Cancel Appointment:', error);
@@ -98,7 +97,7 @@ const useDatabase = (token, user = null) => {
     // Update Function
     const updateAppointment = async (appointmentID, updatedData) => {
         try {
-            // Make the API call to update the appointment
+        
             await axios.put(`http://localhost:3001/appointments/${appointmentID}`, updatedData);
 
             // After updating the appointment, fetch the updated appointments
@@ -150,7 +149,9 @@ const useDatabase = (token, user = null) => {
         fetchData();
     }, [fetchData]);
 
-   //export
+
+
+    // Return the data and the cancelAppointment function
     return { data,cancelAvailableAppointment,updateCustomerInfo, cancelAppointment, fetchCustomerInfo, bookAppointment, checkRole, fetchAppointments, updateAppointment };
 };
 
