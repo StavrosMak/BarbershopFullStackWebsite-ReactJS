@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {//update when mount.
         const storedUser = JSON.parse(localStorage.getItem('user'));
-        console.log(storedUser);
         if (storedUser.id) {
             setUser(storedUser);
             setIsLoggedIn(true);
