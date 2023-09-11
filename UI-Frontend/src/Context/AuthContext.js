@@ -20,12 +20,17 @@ export const AuthProvider = ({ children }) => {
     };
 
 
-    useEffect(() => {//update when mount
+  useEffect(() => {//update when mount.
         const storedUser = JSON.parse(localStorage.getItem('user'));
-        setUser(storedUser);
-        setIsLoggedIn(!!storedUser);
+        console.log(storedUser);
+        if (storedUser.id) {
+            setUser(storedUser);
+            setIsLoggedIn(true);
+        } else {
+            setUser(null);
+            setIsLoggedIn(false);
+        }
     }, []);
-
 
     return (
         <AuthContext.Provider value={{ user, isLoggedIn, handleLogin, handleLogout }}>
