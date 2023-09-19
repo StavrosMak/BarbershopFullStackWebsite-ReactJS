@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {//update when mount.
         const storedUser = JSON.parse(localStorage.getItem('user'));
-        if (storedUser.id) {
+        if (storedUser) {
             setUser(storedUser);
             setIsLoggedIn(true);
         } else {
